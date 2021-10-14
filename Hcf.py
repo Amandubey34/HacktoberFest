@@ -1,29 +1,51 @@
 # Python program to find H.C.F of two numbers
+def calc_hcf(n1,n2):
 
-# define a function
+  if n1 > n2:
 
-def compute_hcf(x, y):
+    small = n2
 
-# choose the smaller number
+  else:
 
-    if x > y:
+    small = n1
 
-        smaller = y
+  for i in range(1,small + 1):
 
-    else:
+    if((n1 % i == 0) and (n2 % i == 0)):
 
-        smaller = x
+      result = i
 
-    for i in range(1, smaller+1):
+  return result
 
-        if((x % i == 0) and (y % i == 0)):
+number1 = int(input("ENTER FIRST NUMBER : "))
 
-            hcf = i 
+number2 = int(input("ENTER SECOND NUMBER : "))
 
-    return hcf
+print("THE HCF OF ",number1," AND ",number2," IS : ",calc_hcf(number1, number2))
 
-num1 = 54 
 
-num2 = 24
 
-print("The H.C.F. is", compute_hcf(num1, num2))
+
+
+
+
+
+     
+
+
+
+      
+
+  
+
+     
+
+  
+
+
+
+
+
+
+
+
